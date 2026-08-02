@@ -10,7 +10,7 @@ OR
 git config user.name
 git config user.email 
 
-git init
+git init # Initialize Repository
 git status
 git status –ignored
 
@@ -33,7 +33,7 @@ ai_learning_code_python> gh auth login
 ? Authenticate Git with your GitHub credentials? Yes                                                                       
 ? How would you like to authenticate GitHub CLI? Login with a web browser                                                  
                                                                                                                            
-! First copy your one-time code: F883-FFFE                                                                                 
+! First copy your one-time code: ABCD-1234                                                                                
 Press Enter to open https://github.com/login/device in your browser...                                                     
 ✓ Authentication complete.
 - gh config set -h github.com git_protocol https
@@ -56,7 +56,7 @@ CREAT REPO ON GITHUB USING TERMINAL
 
 ai_learning_code_python> gh repo create ai_learning_code_python --public
 ✓ Created repository abc-xyz/ai_learning_code_python on github.com
-  https://github.com/abc-xyz/ai_learning_code_puthon
+  https://github.com/abc-xyz/ai_learning_code_python
 
 
 REPO IS NOW CREATED BUT EMPTY – LETS PUSH OUR CODE TO REPO
