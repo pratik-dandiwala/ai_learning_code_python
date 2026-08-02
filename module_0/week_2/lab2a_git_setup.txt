@@ -1,0 +1,70 @@
+Once git is installed. Open your project in VS code.
+
+Below are the commands to run. Check ChatGPT to understand what each command does.
+
+git config --global user.name "John Smith"
+git config --global user.email johnsmith@gmail.com
+
+git config –list 
+OR 
+git config user.name
+git config user.email 
+
+git init
+git status
+git status –ignored
+
+git commit -m "Initial commit: ai_learning_code_python - add Module 0 Week 1 AI labs and configuration"
+(at this point our commits stays in our local machine)
+
+Now before you push the commit, you need to authenticate for your git hub account and create the repo. 
+There are two ways, either you manually create repo on github web OR use git hub cli. (check ChatGPT for authenticate and repo add via web)
+Check gh –version on command prompt, if no output means, git hub CLI is not installed.
+Install git hub cli using “winget install --id GitHub.cli” from command prompt. (see https://cli.github.com/ for latest)
+
+Once git hub CLI is installed, use below process for authorization.
+
+ai_learning_code_python> gh auth status
+You are not logged into any GitHub hosts. To log in, run: gh auth login
+
+ai_learning_code_python> gh auth login
+? Where do you use GitHub? GitHub.com                                                                                      
+? What is your preferred protocol for Git operations on this host? HTTPS                                                   
+? Authenticate Git with your GitHub credentials? Yes                                                                       
+? How would you like to authenticate GitHub CLI? Login with a web browser                                                  
+                                                                                                                           
+! First copy your one-time code: F883-FFFE                                                                                 
+Press Enter to open https://github.com/login/device in your browser...                                                     
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as abc-xyz
+
+
+ONCE DONE – check status again
+ai_learning_code_python> gh auth status
+github.com
+
+  ✓ Logged in to github.com account abc-xyz (keyring)
+  - Active account: true
+  - Git operations protocol: https
+  - Token: gho_************************************
+  - Token scopes: 'gist', 'read:org', 'repo', 'workflow'
+
+
+CREAT REPO ON GITHUB USING TERMINAL
+
+ai_learning_code_python> gh repo create ai_learning_code_python --public
+✓ Created repository abc-xyz/ai_learning_code_python on github.com
+  https://github.com/abc-xyz/ai_learning_code_puthon
+
+
+REPO IS NOW CREATED BUT EMPTY – LETS PUSH OUR CODE TO REPO
+
+git remote add origin https://github.com/abc-xyz/ai_learning_code_python.git
+
+git branch -M main
+
+git push -u origin main
+
+

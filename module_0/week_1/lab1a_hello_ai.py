@@ -32,8 +32,8 @@ try:
         max_tokens=60,
     )
     # response + error
-    print(f"Response: {response.choices[0].message.content}")
-    print(f"Tokens used: {response.usage.total_tokens}")
+    print(f"Response: {response.choices[0].message.content}") # [0] gets the first AI response from the list of generated choices.
+    print(f"Tokens used: {response.usage.total_tokens}")  # Nested object attribute - get the total number of tokens used for this API call.
 
 except AuthenticationError:
     print("Error: Invalid API key. Check your .env file")
