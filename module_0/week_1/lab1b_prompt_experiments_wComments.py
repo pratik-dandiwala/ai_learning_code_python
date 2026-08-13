@@ -23,7 +23,7 @@ load_dotenv() # load .env file, so a program can ready the variable values later
 # The OpenAI SDK automatically uses the default BASE_URL (https://api.openai.com/v1)
 # for all future API requests made through this client.
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini") # get model name from .env, if not return use default "gpt-4.1-mini"
+MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-nano") # get model name from .env, if not return use default "gpt-4.1-nano"
 
 SAMPLE_TEXT = """
 Artificial intelligence has transformed how businesses operate. Companies now use

@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PROVIDER = os.getenv("LLM_PROVIDER", "openai")
-MODEL = os.getenv("LLM_MODEL", "gpt-4.1-mini")
+MODEL = os.getenv("LLM_MODEL", "gpt-4.1-nano")
 
 
 def generate(task_prompt: str, user_text: str) -> dict:

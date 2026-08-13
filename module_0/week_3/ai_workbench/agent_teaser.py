@@ -27,7 +27,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def think(task_description: str) -> str:
     """Agent decides what action to take."""
     response = client.chat.completions.create(
-        model=os.getenv("LLM_MODEL", "gpt-4.1-mini"),
+        model=os.getenv("LLM_MODEL", "gpt-4.1-nano"),
         messages=[
             {
                 "role": "system",

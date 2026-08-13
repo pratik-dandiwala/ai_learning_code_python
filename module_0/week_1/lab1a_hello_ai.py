@@ -15,7 +15,7 @@ if not api_key:
 # The OpenAI SDK automatically uses the default BASE_URL (https://api.openai.com/v1)
 # for all future API requests made through this client.
 client = OpenAI(api_key=api_key)
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-nano") # get model name from .env, if not return use default "gpt-4.1-mini"
+MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-nano") # get model name from .env, if not return use default "gpt-4.1-nano"
 
 # API Call Block
 
