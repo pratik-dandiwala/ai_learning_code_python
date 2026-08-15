@@ -18,8 +18,14 @@ from typing import Optional
 # Field lets you attach rules to individual fields. For example, Field(min_length=1)
 from pydantic import BaseModel, Field
 
-
-class TextRequest(BaseModel):
+# Define the expected structure of an incoming API request.
+# Class = A blueprint (template) used to create objects with a fixed structure.
+# Define a new class named TextRequest based on Pydantic's BaseModel.
+class TextRequest(BaseModel): # Inherit all the validation features and JSON handling from Pydantic's BaseModel.
+    # "text: str" - # Type hint: the text field is expected to contain a string.
+    # Field() - define additional validation rules
+    # (...) - the particular API field is required, in our case "text" is our API field and it can't be ignored
+    # min_length=1 prevents empty text & max_length=10000 limits the input size.
     text: str = Field(..., min_length=1, max_length=10000)
 
 
