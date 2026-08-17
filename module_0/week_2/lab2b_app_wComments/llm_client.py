@@ -4,12 +4,16 @@ Architecture: defines a common interface — swap providers by changing config, 
 Currently implements: OpenAI. Same pattern works for Anthropic, AWS Bedrock.
 """
 
-import os
-from dotenv import load_dotenv
+import os # import python internal module os
+from dotenv import load_dotenv # load .env file
 
-load_dotenv()
+load_dotenv() # load .env file, so a program can ready the variable values later
 
-PROVIDER = os.getenv("LLM_PROVIDER", "openai")
+# Read the LLM provider from the environment.
+# If LLM_PROVIDER is not configured, use "openai" as the default.
+PROVIDER = os.getenv("LLM_PROVIDER", "openai") 
+# Read the LLM model from the environment.
+# If LLM_MODEL is not configured, use "gpt-4.1-nano" as the default.
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-nano")
 
 

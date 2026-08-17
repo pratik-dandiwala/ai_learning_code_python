@@ -24,7 +24,7 @@ if hasattr(sys.stdout, "reconfigure"): # This line checks, (type, method of type
     # For example (str, "upper") > TRUE, where (str, "drive") > FALSE, since string doesn't support drive() method
     sys.stdout.reconfigure(encoding="utf-8") # encode the data in sys.stdout to utf-8
 
-load_dotenv()
+load_dotenv() # load .env file, so a program can ready the variable values later
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-nano")
