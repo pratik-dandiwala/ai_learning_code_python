@@ -22,7 +22,7 @@ if not api_key:
 
 client = OpenAI(api_key=api_key)
 
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+MODEL = os.getenv("OPENAI_MODEL", "gpt-4.1-nano")
 
 PROMPT_DIR = Path("prompts")
 TEST_DATA_FILE = Path("evaluation/rewrite_test_cases.csv")

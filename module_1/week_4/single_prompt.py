@@ -1,19 +1,26 @@
 import os
 import sys
-from dotenv import load_dotenv 
+from dotenv import load_dotenv, find_dotenv 
 from openai import OpenAI, AuthenticationError, APIConnectionError
+
+# If you have copied these project/module files from different source, 
+# its possible that it may load API key from origin rather than your project .env file
+# If so, from pwoersheel execute > $env:OPENAI_API_KEY (notice which API key you see)
+# If not your API key, execute > Remove-Item Env:OPENAI_API_KEY (It will clear the wrong API key)
+# Now when you run $env:OPENAI_API_KEY again, you will see blank outout and it will only get an API ke when you load it again from .env
+# Alternatively, you can also write > load_dotenv(override=True) 
+# to override the exsiting API key with the one availabel in your project .env
 
 load_dotenv()  # Load environment variables from .env file
 
-
-
 api_key = os.getenv("OPENAI_API_KEY")
+
 if not api_key:
     print("Error: OPENAI_API_KEY not found in environment variables.")
     sys.exit(1)
 
 client = OpenAI(api_key=api_key)
-MODEL = os.getenv("OPENAI_MODEL","gpt-4.1-mini")
+MODEL = os.getenv("OPENAI_MODEL","gpt-4.1-nano")
 
 print("Sending prompt: ")
 

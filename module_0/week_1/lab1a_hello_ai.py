@@ -6,6 +6,7 @@ from openai import OpenAI, AuthenticationError, APIConnectionError # import give
 load_dotenv() # load .env file, so a program can ready the variable values later
 
 api_key = os.getenv("OPENAI_API_KEY") # Get API key from .env file
+
 if not api_key:
     print("ERROR: OPENAI_API_KEY not found")
     print("Copy .env.example to .env and add your key.")

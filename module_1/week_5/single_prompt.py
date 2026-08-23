@@ -13,7 +13,7 @@ if not api_key:
     sys.exit(1)
 
 client = OpenAI(api_key=api_key)
-MODEL = os.getenv("OPENAI_MODEL","gpt-4.1-mini")
+MODEL = os.getenv("OPENAI_MODEL","gpt-4.1-nano")
 
 print("Sending prompt: ")
 

@@ -13,7 +13,7 @@ load_dotenv()
 
 MODEL = os.getenv(
     "OPENAI_MODEL",
-    "gpt-4.1-mini"
+    "gpt-4.1-nano"
 )
 
 

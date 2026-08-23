@@ -6,7 +6,7 @@ TASK_CONFIG = {
     "summarize": {
         "prompt": "summarize_v4.txt",
         "provider": "openai",
-        "model": "gpt-4.1-mini"
+        "model": "gpt-4.1-nano"
     },
 
     "rewrite": {
@@ -18,7 +18,7 @@ TASK_CONFIG = {
     "headline": {
         "prompt": "headline_v3.txt",
         "provider": "openai",
-        "model": "gpt-4.1-mini"
+        "model": "gpt-4.1-nano"
     },
 
     "keypoints": {
