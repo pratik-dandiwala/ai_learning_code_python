@@ -6,25 +6,19 @@ TASK_CONFIG = {
     "summarize": {
         "prompt": "summarize_v4.txt",
         "provider": "openai",
-        "model": "gpt-4.1-nano"
+        "model": "gpt-4.1-mini"
     },
 
-    # "rewrite": {
-    #     "prompt": "rewrite_v3.txt",
-    #     "provider": "anthropic",
-    #     "model": "claude-haiku-4-5-20251001"
-    # },
-
-        "rewrite": {
+    "rewrite": {
         "prompt": "rewrite_v3.txt",
-        "provider": "openai",
-        "model": "gpt-4.1-mini"
+        "provider": "anthropic",
+        "model": "claude-haiku-4-5-20251001"
     },
 
     "headline": {
         "prompt": "headline_v3.txt",
         "provider": "openai",
-        "model": "gpt-4.1-nano"
+        "model": "gpt-4.1-mini"
     },
 
     "keypoints": {
