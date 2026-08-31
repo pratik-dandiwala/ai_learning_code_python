@@ -2,12 +2,12 @@ MODEL_CONFIG = {
 
     "small": {
         "provider": "openai",
-        "model": "gpt-4.1-mini"
+        "model": "gpt-4.1-nano"
     },
 
     "large": {
         "provider": "openai",
-        "model": "gpt-4.1"
+        "model": "gpt-4.1-mini"
     }
 }
 

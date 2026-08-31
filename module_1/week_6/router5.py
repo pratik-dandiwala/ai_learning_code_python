@@ -11,14 +11,14 @@ TASK_CONFIG = {
     "summarize": {
         "prompt": "summarize_v5.txt",
         "provider": "openai",
-        "model": "gpt-4.1-mini",
+        "model": "gpt-4.1-nano",
         "output_schema": SummaryOutput
     },
 
     "rewrite": {
         "prompt": "rewrite_v4.txt",
         "provider": "openai",
-        "model": "gpt-4.1",
+        "model": "gpt-4.1-nano",
         "output_schema": RewriteOutput
     },
 
@@ -32,7 +32,7 @@ TASK_CONFIG = {
     "keypoints": {
         "prompt": "keypoints_v2.txt",
         "provider": "openai",
-        "model": "gpt-4.1-mini",
+        "model": "gpt-4.1-nano",
         "output_schema": KeypointsOutput
     }
 }

@@ -26,7 +26,7 @@ class Config:
 
     PRIMARY_MODEL = os.getenv(
         "PRIMARY_MODEL",
-        "gpt-4.1"
+        "gpt-4.1-nano"
     )
 
 
