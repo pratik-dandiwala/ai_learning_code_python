@@ -2,3 +2,6 @@
 __pyache__/
 *.pyc
 .venv/
+venv/
+chunks.jsonl
+.DS_Store
