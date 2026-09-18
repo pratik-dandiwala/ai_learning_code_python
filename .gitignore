@@ -5,3 +5,6 @@ __pyache__/
 venv/
 chunks.jsonl
 .DS_Store
+index.faiss
+index.faiss.chunks.json
+qdrant_storage/
