@@ -55,6 +55,7 @@
 # Command:
 #
 # uvicorn lab2b_app.main:app --reload
+# uvicorn app.main:app --port 8000 --reload
 #
 #
 # Breakdown:
